@@ -79,35 +79,76 @@ h3 {
 
 #contact {
     padding: 5em 12em;
-    text-align: center;
 }
 
-#contact h1 {
-    font-weight: 500;
-    margin-top: 30px;
+
+#contact h2 {
+    text-align: center;
+    font-weight: 700;
 }
 
 #contact p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 30px auto;
 }
 
 .getInTouch {
-    /* border: none; */
     border: 1px solid;
     border-radius: 7px;
     padding: 1em 2em;
     width: 200px;
-    /* background-color: rgba(0, 0, 0, 0.285); */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* text-align: center; */
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 4px;
+
+}
+
+input, textarea {
+    padding: 3px 5px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.smLinks {
+    text-align: center;
+    margin: 40px 0;
+    /* width: 50%; */
 }
 
 .smLinks a {
     color: black;
     text-decoration: none;
     font-size: 1.2em;
-    margin: 10px;
+    margin: 0 10px;
 }
 
  a:hover {
     color: peru;
+}
+
+button {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 1em;
 }
