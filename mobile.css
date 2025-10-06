@@ -1,0 +1,179 @@
+/*                      Large Screen sizes */
+@media (min-width:769px) and (max-width:1279px) {
+    nav {
+        padding: 20px 50px;
+    }
+    nav li a {
+        font-size: 1.1em;
+        margin: 0 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    header, #about, #contact {
+        padding: 70px;
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    #about img {
+        width: 350px;
+    }
+}
+
+
+/*                               Medium Screen sizes / Tablets */
+@media (min-width:577px) and (max-width:768px) {
+    nav ul {
+        display: none;   
+    }
+
+    nav {
+        padding: 20px 40px;
+    }
+    .open-side-bar {
+        display: block;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+    
+    header, #about, #contact {
+        padding: 70px 30px;
+        gap: 20px;
+    }
+    form {
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    #about img {
+        width: 300px;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+    #contact p {
+        font-size: 1.1em;
+        margin-top: 0;
+    }
+    .smLinks a {
+        font-size: 1em;
+    }
+
+}
+
+/*                                      Small Screen */
+@media screen and (max-width:576px) {
+    nav {
+        padding: 20px 20px;
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+    nav ul {
+        display: none;   
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 1em;
+        line-height: 20px;
+    }
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    .open-side-bar {
+        display: block;
+    }
+    
+    header, #about, #contact {
+        padding: 30px 40px;
+        gap: 0;
+    }
+    .text {
+        width: 100%;
+    }
+    .aboutText {
+        margin: 0 10%;
+    }
+    header {
+        flex-direction: column-reverse;
+    }
+    header img {
+        width: 250px;
+        margin-bottom: 40px;
+    }
+    #about {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #about img {
+        width: 280px;
+        margin-bottom: 40px;
+    }
+    #contact p {
+        font-size: 1.05em;
+        margin-top: 5px;
+        text-align: center;
+    }
+    form {
+        width: 100%;
+    }
+    label {
+        font-size: 1.05em;
+    }
+    input, textarea {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .smLinks {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        text-align: left;
+    }
+    .smLinks a {
+        font-size: 1em;
+    }
+    button {
+        margin-top: 10px;
+        font-size: 1em;
+        padding: 7px;
+    }
+    button:active {
+    opacity: .7;
+}
+
+}
