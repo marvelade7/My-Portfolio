@@ -1,97 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mobile.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        />
+    </head>
+    <body>
+        <div class="overlay" id="overlay"></div>
+        <nav>
+            <h1>Portfolio</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <img
+                src="./Images/menu.png"
+                alt=""
+                width="20px"
+                class="open-side-bar"
+                onclick="openSideBar()"
+            />
+        </nav>
 
-</head>
-<body>
-    <div class="overlay" id="overlay"></div>
-    <nav>
-        <h1>Portfolio</h1>
-        <ul>
-            <li> <a href="#home">Home</a></li>
-            <li> <a href="#about">About</a></li>
-            <li> <a href="#portfolio">Projects</a></li>
-            <li> <a href="#contact">Contact</a></li>
-        </ul>
-        <img src="./Images/menu.png" alt="" width="20px" class="open-side-bar" onclick="openSideBar()">
-    </nav>
-
-    <div class="side-bar">
-        <img src="./Images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" style="filter: invert(1); margin: 10px 10px;" onclick="closeSideBar()">
-        <ul>
-            <li> <a href="#home">Home</a></li>
-            <li> <a href="#about">About</a></li>
-            <li> <a href="#portfolio">Projects</a></li>
-            <li> <a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
-    <header id="home">
-        <div class="text">
-            <p>Hello</p>
-            <h2>I'm Marvellous Adewuyi, a Fullstack Web Developer</h2>
-            <p>I design and build clean, responsive, and user-friendly websites using HTML, CSS and JavaScript.</p>
+        <div class="side-bar">
+            <img
+                src="./Images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+                alt=""
+                style="filter: invert(1); margin: 10px 10px"
+                onclick="closeSideBar()"
+            />
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <img src="./Images/IMG1.jpg" alt="">
 
-    </header>
+        <header id="home">
+            <div class="text">
+                <p>Hi</p>
+                <h2>I'm Marvellous Adewuyi,</h2>
+                <p>
+                    I'm a Fullstack Web Developer who loves clean code, sleek
+                    interfaces, and solving real-world problems through tech.
+                    <span id="see" onclick="seeMore()"><i>see more</i></span>
+                </p>
+                <p class="see-more">
+                    I build responsive websites, craft APIs, and debug like a
+                    detective. My journey started with curiosity and grew into
+                    obsession. I’m constantly learning, leveling up, and writing
+                    code that’s efficient, elegant, and maintainable. Let’s
+                    build something amazing together.
+                    <span id="less" onclick="seeLess()"><i>hide</i></span>
+                </p>
+                <div class="smLinks">
+                    <a href="mailto:marveladeadewuyi@gmail.com"
+                        ><i class="bi bi-envelope"></i
+                    ></a>
+                    <a href="www.linkedin.com/in/marvellous-adewuyi-a32070278"
+                        ><i class="bi bi-linkedin"></i
+                    ></a>
+                    <a href="https://github.com/marvelade7"
+                        ><i class="bi bi-github"></i
+                    ></a>
+                    <a href="https://www.facebook.com/marvellous.adewuyi.7"
+                        ><i class="bi bi-facebook"></i
+                    ></a>
+                    <a href="https://instagram.com/marvel_ade"
+                        ><i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/2347012893212"
+                        ><i class="bi bi-whatsapp"></i
+                    ></a>
+                </div>
+            </div>
+            <img src="./Images/IMG1.jpg" alt="" />
+        </header>
 
-    <section id="about">
-        <img src="./Images/IMG-20250126-WA0019.jpg" alt="">
-        <div class="aboutText">
-            <h2>About</h2>
-            <h3>Full Name</h3>
-            <p>Adewuyi Marvellous Adewumi</p>
+        <section id="about">
+            <img src="./Images/IMG-20250126-WA0019.jpg" alt="" />
+            <div class="aboutText">
+                <h2>About</h2>
+                <h3>Full Name</h3>
+                <p>Adewuyi Marvellous Adewumi</p>
 
-            <h3>Location</h3>
-            <p>Ogbomoso, Oyo State. Nigeria</p>
+                <h3>Location</h3>
+                <p>Ogbomoso, Oyo State. Nigeria</p>
 
-            <h3>Degree / Certification</h3>
-            <p>B Tech in Computer Science</p>
-            
-            <h3>Institution</h3>
-            <p>Ladoke Akintola University Of Technology (LAUTECH)</p>
+                <h3>Degree / Certification</h3>
+                <p>B Tech in Computer Science</p>
 
-            <h3>Languages</h3>
-            <p>English, Yoruba</p>
-        </div>
-    </section>
+                <h3>Institution</h3>
+                <p>Ladoke Akintola University Of Technology (LAUTECH)</p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="container">
-        
-            <p>Have a project in mind? Let's work together</p>
-            <form action="">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
+                <h3>Languages</h3>
+                <p>English, Yoruba</p>
+            </div>
+        </section>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <img
+                        src="./Images/Gemini_Generated_Image_dq8622dq8622dq86.png"
+                        alt=""
+                    />
+                    <h3>Loan Application Landing Page</h3>
+                    <p>
+                        A clean, functional landing page where users input loan
+                        amounts and instantly see calculated interest and total
+                        repayment.
+                    </p>
+                    <div class="btns">
+                        <a href="https://github.com/marvelade7/Loan-Application"
+                            >Repository</a
+                        >
+                        <a href="https://marvelade7.github.io/Loan-Application/"
+                            >Demo</a
+                        >
+                    </div>
+                </div>
 
-                <label for="message">Your Message</label>
-                <textarea name="message" rows="5" id="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        
-        <div class="smLinks">
+                <div class="card">
+                    <img
+                        src="./Images/Gemini_Generated_Image_35ik1u35ik1u35ik.png"
+                        alt=""
+                    />
+                    <h3>Smile Creation</h3>
+                    <p>
+                        A sleek e-commerce-style layout featuring product cards
+                        and responsive design. Still in progress, but already
+                        laying the foundation for a full shopping experience.
+                    </p>
+                    <div class="btns">
+                        <a href="https://github.com/marvelade7/Smile-Creation"
+                            >Repository</a
+                        >
+                        <a href="https://marvelade7.github.io/Smile-Creation/"
+                            >Demo</a
+                        >
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img
+                        src="./Images/Gemini_Generated_Image_kopq3lkopq3lkopq.png"
+                        alt=""
+                    />
+                    <h3>Wed.Dev Clone</h3>
+                    <p>
+                        A responsive replica of the official Web.dev homepage,
+                        built to sharpen layout skills and mimic real-world
+                        design standards.
+                    </p>
+                    <div class="btns">
+                        <a href="https://github.com/marvelade7/Web.Dev-Site"
+                            >Repository</a
+                        >
+                        <a href="https://marvelade7.github.io/Web.Dev-Site/"
+                            >Demo</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="container">
+                <p>Have a project in mind? Let's work together</p>
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required />
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required />
+
+                    <label for="message">Your Message</label>
+                    <textarea
+                        name="message"
+                        rows="5"
+                        id="message"
+                        required
+                    ></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <!-- <div class="smLinks">
             <a href="mailto:marveladeadewuyi@gmail.com">Email</a>
             <a href="www.linkedin.com/in/marvellous-adewuyi-a32070278">LinkedIn</a>
             <a href="https://github.com/marvelade7">GitHub</a>
             <a href="https://www.facebook.com/marvellous.adewuyi.7">Facebook</a>
             <a href="https://instagram.com/marvel_ade">Instagram</a>
             <a href="https://wa.me/2347012893212">Whatsapp</a>
-        </div>
-        </div>
-    </section>
-</body>
-<script src="script.js"></script>
+        </div> -->
+            </div>
+        </section>
+    </body>
+    <script src="script.js"></script>
 </html>

@@ -1,5 +1,5 @@
 /*                      Large Screen sizes */
-@media (min-width:769px) and (max-width:1279px) {
+@media (min-width: 769px) and (max-width: 1279px) {
     nav {
         padding: 20px 50px;
     }
@@ -10,8 +10,11 @@
     h1 {
         font-size: 1.5em;
     }
-    
-    header, #about, #contact {
+
+    header,
+    #about,
+    #contact,
+    #projects {
         padding: 70px;
         gap: 20px;
     }
@@ -27,13 +30,19 @@
     #about img {
         width: 350px;
     }
+    body .cards {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 60%;
+    }
 }
 
-
 /*                               Medium Screen sizes / Tablets */
-@media (min-width:577px) and (max-width:768px) {
+@media (min-width: 577px) and (max-width: 768px) {
     nav ul {
-        display: none;   
+        display: none;
     }
 
     nav {
@@ -50,8 +59,11 @@
     p {
         font-size: 1.1em;
     }
-    
-    header, #about, #contact {
+
+    header,
+    #about,
+    #contact,
+    #projects {
         padding: 70px 30px;
         gap: 20px;
     }
@@ -81,10 +93,16 @@
         font-size: 1em;
     }
 
+    body .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
 }
 
 /*                                      Small Screen */
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
     nav {
         padding: 20px 20px;
         position: sticky;
@@ -92,7 +110,7 @@
         background-color: white;
     }
     nav ul {
-        display: none;   
+        display: none;
     }
     h1 {
         font-size: 1.3em;
@@ -102,8 +120,8 @@
         line-height: 20px;
     }
     h2 {
-        font-size: 1.2em;
-        margin-bottom: 15px;
+        font-size: 1.25em;
+        margin-bottom: 7px;
     }
     h3 {
         font-size: 1.1em;
@@ -111,8 +129,11 @@
     .open-side-bar {
         display: block;
     }
-    
-    header, #about, #contact {
+
+    header,
+    #about,
+    #contact,
+    #projects {
         padding: 30px 40px;
         gap: 0;
     }
@@ -150,22 +171,14 @@
     label {
         font-size: 1.05em;
     }
-    input, textarea {
+    input,
+    textarea {
         font-size: 1em;
         margin-bottom: 15px;
     }
-    .smLinks {
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        text-align: left;
-    }
     .smLinks a {
         font-size: 1em;
+        margin-right: 20px;
     }
     button {
         margin-top: 10px;
@@ -173,7 +186,32 @@
         padding: 7px;
     }
     button:active {
-    opacity: .7;
-}
+        opacity: 0.7;
+    }
+    body .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+    #projects h2 {
+        font-size: 1.5em;
+        margin-top: 50px;
+    }
+    .card h3 {
+        font-size: 1.2em;
+    }
+    .card p {
+        font-size: 1em;
+    }
+    .card img {
+        width: 100%;
+    }
+    .btn a {
+        font-size: 1em;
+    }
 
+    .smLinks {
+        margin: 10px 0;
+    }
 }

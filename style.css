@@ -45,6 +45,9 @@ nav {
     padding: 1.2em 5em 1.2em 10em;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.285);
     z-index: 999;
+    position: sticky;
+    background-color: white;
+    top: 0;
 }
 
 h1 {
@@ -85,12 +88,26 @@ p {
 h2 {
     font-size: 2.5em;
     font-weight: 600;
-    margin: 10px 0;
+    margin: 2px 0 10px 0;
 }
 
 header img {
     width: 300px;
     border-radius: 100%;
+    transition: 0.3s;
+    opacity: 0;
+    animation: fadeInSlow 2.5s ease-out forwards;
+}
+
+@keyframes fadeInSlow {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #about {
@@ -104,6 +121,19 @@ header img {
     width: 400px;
     border-radius: 20px;
     margin-right: 20px;
+    transition: 0.3s;
+    animation: translate 1s ease-out;
+}
+
+@keyframes translate {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(10px, 0);
+    }
 }
 
 h3 {
@@ -114,7 +144,6 @@ h3 {
 #contact {
     padding: 5em 12em;
 }
-
 
 #contact h2 {
     text-align: center;
@@ -136,7 +165,6 @@ h3 {
 .container {
     display: flex;
     flex-direction: column;
-
 }
 
 form {
@@ -152,25 +180,24 @@ form {
 label {
     font-size: 1.2em;
     margin-bottom: 4px;
-
 }
 
-input, textarea {
+input,
+textarea {
     padding: 3px 5px;
     font-size: 1.1em;
     margin-bottom: 10px;
 }
 
 .smLinks {
-    text-align: center;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .smLinks a {
     color: black;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 10px;
+    text-decoration: underline;
+    font-size: 1.5em;
+    margin-right: 30px;
 }
 
 a:hover {
@@ -185,17 +212,116 @@ button {
     font-size: 1em;
     color: white;
     background-color: peru;
-}  
+}
 
 button:active {
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .overlay {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
     z-index: 900;
+}
+
+#projects {
+    padding: 5em 12em;
+    background-color: white;
+}
+
+.cards {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 20px;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.card img:hover {
+    transform: scale(1.02);
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.3em;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.btns a {
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid peru;
+    border-radius: 7px;
+    padding: 7px 0px;
+    width: 40%;
+    font-weight: 600;
+    color: peru;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.btns a:hover {
+    color: white;
+    background-color: peru;
+}
+
+.btns a:active {
+    background-color: rgb(135, 87, 38);
+}
+
+.see-more {
+    max-height: 0;
+    margin-top: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.see-more.show {
+    max-height: 500px;
+    opacity: 1;
+}
+span {
+    color: rgba(0, 0, 0, 0.507);
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: underline;
 }

@@ -19,3 +19,25 @@ document.getElementById("overlay").addEventListener("click", () => {
 document.querySelectorAll('.side-bar a').forEach(link => {
     link.addEventListener('click', closeSideBar);
 });
+
+function seeMore() {
+    const content = document.querySelector('.see-more');
+    const seeBtn = document.getElementById('see');
+    const lessBtn = document.getElementById('less');
+
+    content.classList.add('show');
+    seeBtn.style.display = 'none';
+    lessBtn.style.display = 'inline-block';
+}
+
+function seeLess() {
+    const content = document.querySelector('.see-more');
+    const seeBtn = document.getElementById('see');
+    const lessBtn = document.getElementById('less');
+
+    content.classList.remove('show');
+    seeBtn.style.display = 'inline-block';
+    lessBtn.style.display = 'none';
+}
+
+
